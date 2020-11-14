@@ -1,0 +1,44 @@
+import urllib.request
+import urllib.parse
+import bs4
+import requests
+import re
+import json
+
+#crawling facebook
+url = "https://www.facebook.com/search/top?q=%EC%84%B8%EC%9B%94%ED%98%B8"
+html = urllib.request.urlopen(url)
+response = requests.get(url)
+
+#for finding target
+#bsObj = bs4.BeautifulSoup(response.text, "lxml")
+#target = bsObj.findAll("li", {"class" : ""})
+#targetlink = target.find("a")
+# targeturl =targetlink["href"]
+# targethtml = urllib.request.urlopen(targeturl)
+# targetbsObj = bs4.BeautifulSoup(targethtml, "html.parser")
+# targettitle = targetbsObj.find("title").text
+# targetvalue = targetbsObj.find("script" , type="application/ld+json").text
+# jsonData = json.loads(targetvalue)
+#print(targeturl)
+
+
+#afther finding
+#i=1
+#for link in target:
+   #targetlink = link.find("a")
+    #targeturl = targetlink["href"]
+    #targethtml = urllib.request.urlopen(targeturl)
+    #targetbsObj = bs4.BeautifulSoup(targethtml, "html.parser")
+    #targettitle = targetbsObj.find("title").text
+
+    #targetvalue = targetbsObj.find("script", type="application/ld+json").text
+    #jsonData = json.loads(targetvalue)
+    #print('-----------')
+    #print(jsonData['articleBody'])
+    #i=i+1
+    #print(i+"번째")
+    #f = open(", 'w')
+
+
+#print(jsonData['articleBody'])
